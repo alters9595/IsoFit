@@ -40,14 +40,14 @@ isofit_module
 
 Main script from which the program is run by hitting start in the editor tab or pressing F5. It is not required to edit the other functions.
 
--------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = gen_struct(data,opts)
 
 This function generates two data structures (structs): iso_data and iso_pars. These structs are used throughout the remainder of functions
 to pass around isotherm data (in iso_data), fitting options (in iso_pars), and isotherm parameters (in iso_pars).
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = isodata_processing(iso_data,iso_pars)
 
@@ -56,20 +56,20 @@ Isotherm Data Sheet" by calculating bound concentrations (q) of each component f
 (c_load). Phase ratio is employed in this calculation and is corrected for hold-up volume using the resin hold-up fraction 
 (recommended value of 0.6).
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 iso_pars = parse_pars(iso_pars,iso_data)
 
 This function parses the parameter ranges specified in the Excel sheet for the desired isotherm formalism and resin "Parameter Ranges (mode)".
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 iso_pars = multicomp_par_transform(iso_pars,iso_data)
 
 This function transforms the provided isotherm parameter set into a form suitable for multicomponent isotherm. This may simply be reshaping
 the parameter array for all components or applying the multicomponent assumptions described in the Excel sheet "Fitting Options".
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 obj = calc_obj(pg,iso_data,iso_pars)
 
@@ -77,26 +77,26 @@ This function calculates the fitting objective value which is based on normalize
 and the fitted q values. The objective value is normalized with respect to the starting point value and should max at around unity.
 A negative weight is given to parameter sets that have negative stoichiometric terms (nu and n) at any pH in the provided batch data.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = run_opt(iso_data,iso_pars);
 
 This function runs the parameter fitting routine (optimization) using a genetic algorithm with the specified optimization tolerance and
 maximum number of generations.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = solve_iso(iso_data,iso_pars)
 
 This function solves for q using the salt, pH, and c_ft for the selected isotherm formalism for single component and multicomponent forms.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 iso_pars = set_dir(iso_pars);
 
 This function sets the final directory that the outputs will be saved to.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = calc_stats(iso_data,iso_pars)
 
@@ -105,7 +105,7 @@ the optimization routine. Confidence intervals are also calculated here using th
 is applied to each parameter value one at a time and a jacobian matrix is developed. The covariance matrix is derived from here and used to
 calculate the confidence intervals (expressed in % of the corresponding parameter value).
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 plot_iso(iso_data,iso_pars)
 
@@ -114,32 +114,32 @@ generate model curves (arbitrary input c_ft) or data points evaluated at the sam
 each pH with a q vs c curve per each salt concentration in both 2D and 3D with labels according to the protein and resin used. Plots are
 exported in .png format to the specified export folder.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 export_results(iso_data,iso_pars)
 
 This function exports the parameter values, confidence intervals, statistics, and isotherm data to an excel sheet "Isotherm fit results"
 located in the output folder. The cells in each sheet are formatted automatically to select appropriate column sizes.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 FROM TAL SHIR ON MATHWORKS FORUM, COPYRIGHT (c) 2008
 xlsAutoFitCol(filename,sheetname,varargin)
 
 This function changes the specified cell on an excel sheet to be autofit to its appropriate column width.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 FROM STEVE AMBROISE ON MATHWORKS FORUM, COPYRIGHT (c) 2009
 y = linspaceNDim(d1,d2,n)
 
 This function creates a linearly spaced matrix in N dimensions. It is analogous to linspace, except scaled to higher dimensional space.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
 FROM MATT BRUNNER ON MATHWORKS FORUM, COPYRIGHT (c) 2010
 a1String = idx2A1(idx)
 
 This function converts an array index to a excel cell string.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
