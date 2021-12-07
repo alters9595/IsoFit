@@ -4,7 +4,7 @@ All rights reserved.
 
 Contact: alters9595@gmail.com for any questions, suggestions, or request for additional features and/or bug fixes.
 
-----------------------------------------------------------INSTRUCTIONS-------------------------------------------------------------------
+----------------------------------------------------INSTRUCTIONS-------------------------------------------------------------
 
 1) Open the excel file titled "Sheet for adsorption isotherm data entry". Enter the batch data into the "Adsorption Isotherm Data Sheet" tab
 and specify the pH, salt (mM), protein load concentration (mg/ml), protein flowthrough (mobile phase) concentration (mg/ml), 
@@ -34,13 +34,13 @@ Isotherm Fits folder, will have (1) if this folder was already existing (to prev
 in individual .png files with the names corresponding to the protein name, resin name, and pH. Another export containing the parameters,
 confidence intervals, statistics, and isotherm data will be present here in the same folder titled "Isotherm fit results".  
 
---------------------------------------------------------SUMMARY OF FUNCTIONS-----------------------------------------------------------------
+------------------------------------------------SUMMARY OF FUNCTIONS---------------------------------------------------------
 
 isofit_module
 
 Main script from which the program is run by hitting start in the editor tab or pressing F5. It is not required to edit the other functions.
 
----------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
 
 [iso_data,iso_pars] = gen_struct(data,opts)
 
