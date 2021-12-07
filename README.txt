@@ -4,7 +4,7 @@ All rights reserved.
 
 Contact: alters9595@gmail.com for any questions, suggestions, or request for additional features and/or bug fixes.
 
--------------------------------------------------------INSTRUCTIONS----------------------------------------------------------------
+---------------------------------------------------------INSTRUCTIONS------------------------------------------------------------------
 
 1) Open the excel file titled "Sheet for adsorption isotherm data entry". Enter the batch data into the "Adsorption Isotherm Data Sheet" tab
 and specify the pH, salt (mM), protein load concentration (mg/ml), protein flowthrough (mobile phase) concentration (mg/ml), 
