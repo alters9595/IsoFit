@@ -61,7 +61,7 @@ export_results(iso_data,iso_pars);
 
 % End timer and program ending notification
 fprintf("\n---------------------------PROGRAM ENDING" + ...
-    "---------------------------\n"); toc;
+    "---------------------------\n\n"); toc;
 
 
 

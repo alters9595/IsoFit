@@ -55,6 +55,10 @@ function plot_iso(iso_data,iso_pars)
     mkr = {'o','s','d','^','v','h','p','*','x',...
         'o','s','d','^','v','h','p','*','x'};
     
+    % Declare beginning of plot generation
+    fprintf("\n---------------------------GENERATING PLOTS" + ...
+    "---------------------------\n");
+
     % Go through plot scheme for each component at each pH
     for n=1:n_comp
         for i=1:n_pH

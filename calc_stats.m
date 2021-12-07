@@ -11,6 +11,10 @@ protein_names = iso_pars.protein_names;
 pars_fit = iso_pars.current_par;
 meas_err = iso_pars.meas_error;
 
+% Declare beginning of statistics calculation
+fprintf("\n------------------------CALCULATING STATISTICS" + ...
+    "------------------------\n\n");
+
 % Number of data points, components, and parameters
 n_pts = size(q,1);
 n_cmp = size(q,2);
