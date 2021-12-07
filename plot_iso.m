@@ -194,7 +194,7 @@ function plot_iso(iso_data,iso_pars)
             
             % Export 3D plot
             fig_name = strcat(fig_title,' 3D.png');
-            exportgraphics(gcf,fullfile(directory,fig_name));
+            saveas(gcf,fullfile(directory,fig_name));
             delete(gcf);
             
             % Call 2D plot
@@ -228,7 +228,7 @@ function plot_iso(iso_data,iso_pars)
             
             % Export 2D plot
             fig_name = strcat(fig_title,' 2D.png');
-            exportgraphics(gcf,fullfile(directory,fig_name));
+            saveas(gcf,fullfile(directory,fig_name));
             delete(gcf);
                        
             clear('lgd')

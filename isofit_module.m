@@ -5,7 +5,7 @@
 % modified.
 
 % Start timer and program starting notification
-tic; fprintf("---------------------------PROGRAM STARTING" + ...
+tic; fprintf("\n---------------------------PROGRAM STARTING" + ...
     "---------------------------\n");
 
 % Clear variables and plots
@@ -60,7 +60,7 @@ plot_iso(iso_data,iso_pars);
 export_results(iso_data,iso_pars);
 
 % End timer and program ending notification
-fprintf("---------------------------PROGRAM ENDING" + ...
+fprintf("\n---------------------------PROGRAM ENDING" + ...
     "---------------------------\n"); toc;
 
 

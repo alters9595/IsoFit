@@ -14,6 +14,10 @@ opt_tol = iso_pars.opt_tolerance; max_gens = iso_pars.ga_max_gens;
 options = optimoptions('ga','FunctionTolerance',opt_tol,'Display','iter',...
     'PlotFcn',@gaplotbestfun,'MaxGenerations',max_gens);
 
+% Declare beginning of parameter fitting routine
+fprintf("\n---------------------------FITTING START" + ...
+    "---------------------------\n");
+
 % Run parameter estimation routine using genetic algorithm
 fit_pars = ga(@(par_i)calc_obj(par_i,iso_data,iso_pars),...
     numel(pg),[],[],[],[],lb,ub,[],options);
@@ -25,6 +29,10 @@ if iso_pars.num_comp > 1
 end
 [iso_data,iso_pars] = solve_iso(iso_data,iso_pars);
 iso_data.bound_conc_eval = real(iso_data.bound_conc_eval);
+
+% Declare beginning of parameter fitting routine
+fprintf("\n---------------------------FITTING COMPLETE" + ...
+    "---------------------------\n");
 
 end
 
