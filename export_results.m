@@ -21,7 +21,7 @@ n_cmp = iso_pars.num_comp;                   % Number of components
 par_table = strings(3*n_cmp,size(par_names,2)+1);
 
 % Declare beginning of results export
-fprintf("\n--------------------------EXPORTING RESULTS" + ...
+fprintf("\n---------------------------EXPORTING RESULTS" + ...
     "--------------------------\n");
 
 % Collate parameter names, values, and confidence intervals (CI) per comp

@@ -15,8 +15,8 @@ options = optimoptions('ga','FunctionTolerance',opt_tol,'Display','iter',...
     'PlotFcn',@gaplotbestfun,'MaxGenerations',max_gens);
 
 % Declare beginning of parameter fitting routine
-fprintf("\n---------------------------FIT STARTING" + ...
-    "---------------------------\n");
+fprintf("\n-----------------------------FIT STARTING" + ...
+    "-----------------------------\n");
 
 % Run parameter estimation routine using genetic algorithm
 fit_pars = ga(@(par_i)calc_obj(par_i,iso_data,iso_pars),...
@@ -31,8 +31,8 @@ end
 iso_data.bound_conc_eval = real(iso_data.bound_conc_eval);
 
 % Declare end of parameter fitting routine
-fprintf("\n---------------------------FIT COMPLETED" + ...
-    "---------------------------\n");
+fprintf("\n-----------------------------FIT COMPLETE" + ...
+    "-----------------------------\n\n");
 
 end
 

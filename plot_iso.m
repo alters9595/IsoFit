@@ -57,7 +57,7 @@ function plot_iso(iso_data,iso_pars)
     
     % Declare beginning of plot generation
     fprintf("\n---------------------------GENERATING PLOTS" + ...
-    "---------------------------\n");
+    "---------------------------\n\n");
 
     % Go through plot scheme for each component at each pH
     for n=1:n_comp
