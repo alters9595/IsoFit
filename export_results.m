@@ -12,7 +12,7 @@ pH = iso_data.pH;                            % pH values
 pars = iso_pars.current_par;                 % Fitted isotherm parameters
 ci = iso_pars.confidence_int;                % Confidence intervals
 par_names = iso_pars.par_names;              % Parameter names
-stats = iso_pars.stats;                      % Fit statistics
+stats_fit = iso_pars.stats;                  % Fit statistics
 directory = iso_pars.export_dir;             % Export directory
 protein_names = iso_pars.protein_names';     % Protein names
 n_cmp = iso_pars.num_comp;                   % Number of components
@@ -89,13 +89,13 @@ end
 
 % Write statistics table to excel sheet
 sheetname = 'Fit Statistics';
-xlswrite(fileloc,stats,sheetname);
+xlswrite(fileloc,stats_fit,sheetname);
 
 % Perform autofit for statistics table
-for i=1:size(stats,2)
+for i=1:size(stats_fit,2)
     % Find cell index of the longest string in parameters table
     [~,idx] = ...
-        max(strlength(stats(:,i)).*isnan(str2double(stats(:,i))));
+        max(strlength(stats_fit(:,i)).*isnan(str2double(stats_fit(:,i))));
     cell_idx = strcat(idx2A1(i),num2str(idx)); 
     
     % Autofit column with respect to cell with longest string
