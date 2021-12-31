@@ -30,10 +30,12 @@ if isfield(iso_pars,'deletion_mat')
 end
 
 % Generate scaling factor for size assumption, calculated from relative 
-% surface area using hydrodynamic radii obtained from molecular weight
-% correlation. Surface area here is relative to the component in highest
-% concentration in the load material.
-r_h = 0.886.*mw.^(1/3);
+% surface area using hydrodynamic radii (Rh) obtained from molecular weight
+% (MW) correlation. Surface area here is relative to the component in 
+% highest concentration in the load material. Correlation was obtained
+% from a power law fit using Rh and MW data for 25 proteins between
+% 5 and 1000 kDa.
+r_h = 0.7429.*mw.^0.3599;
 [~,loc] = max(feed_comp);
 size_scale = r_h.^2./r_h(loc)^2;
     
