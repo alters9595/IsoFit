@@ -58,7 +58,7 @@ function obj = calc_obj(par_i,iso_data,iso_pars)
         obj = sqrt(sum(abs((q_fit - q).^2)./pts_ct).*...
             (var(q)./sum(q.^2))/n_pts);
               
-    % If any stoichiometric parameters are negative
+    % If any stoichiometric parameters are negative or solver failed
     elseif stoich_flag == 1 || solver_flag == 1
         % Set arbitarily high objective value
         obj = 2;
