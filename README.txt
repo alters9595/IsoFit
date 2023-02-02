@@ -1,5 +1,5 @@
 IsoFit Software 
-Copyright (c) 2022, Scott Altern
+Copyright (c) 2023, Scott Altern
 All rights reserved.
 
 Contact: alters9595@gmail.com for any questions, suggestions, or request for additional features and/or bug fixes.
