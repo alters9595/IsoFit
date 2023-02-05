@@ -1,4 +1,4 @@
-IsoFit Software 
+IsoFit
 Copyright (c) 2023, Scott Altern
 All rights reserved.
 
