@@ -166,7 +166,7 @@ for i=1:size(pars_fit,1)
 
         % Compute covm using pseudoinverse if singular
         if strcmp(warnId,'MATLAB:nearlySingularMatrix')
-            covm = pinv(hessian);
+            covm = pinv(hessian)*meas_err(i)^2;
         end
         
         % Parse diagonal values
