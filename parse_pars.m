@@ -7,25 +7,25 @@ function iso_pars = parse_pars(iso_pars,iso_data)
         case 'CEX'
             [~,~,par_sheet] = ...
                 xlsread('Sheet for adsorption isotherm data entry',...
-                'Parameter Range (CEX)');
+                'Parameter Range (CEX)'); % #ok
 
         % For anion exchange (AEX)
         case 'AEX'
             [~,~,par_sheet] = ...
                 xlsread('Sheet for adsorption isotherm data entry',...
-                'Parameter Range (AEX)');
+                'Parameter Range (AEX)'); % #ok
 
         % For multimodal cation exchange (MMCEX)
         case 'MMCEX'
             [~,~,par_sheet] = ...
                 xlsread('Sheet for adsorption isotherm data entry',...
-                'Parameter Range (MMCEX)');
+                'Parameter Range (MMCEX)'); % #ok
 
         % For multimodal anion exchange (MMAEX)
         case 'MMAEX'
             [~,~,par_sheet] = ...
                 xlsread('Sheet for adsorption isotherm data entry',...
-                'Parameter Range (MMAEX)');
+                'Parameter Range (MMAEX)'); % #ok
 
         % For invalid selection
         otherwise
