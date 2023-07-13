@@ -38,7 +38,7 @@ function plot_iso(iso_data,iso_pars)
         pH_idx_tmp = pH_idx(i):pH_idx(i+1)-1;
         
         % Sort salt concentrations
-        [salt_tmp1,salt_idx_tmp1] = sort(salt(pH_idx_tmp));
+        [salt_tmp1,_tmp1] = sort(salt(pH_idx_tmp));
         
         % Generate temporary salt array and index
         salt_idx_tmp1 = salt_idx_tmp1 + pH_idx(i) - 1;
@@ -75,7 +75,7 @@ function plot_iso(iso_data,iso_pars)
 
             % Determine unique salt values at each pH
             [salt_unq,salt_idx] = unique(salt_tmp);
-            salt_idx = [salt_idx; numel(salt_tmp)+1];
+            salt_idx = [salt_idx; numel(salt_tmp)+1]; % #ok
 
             % Develop c array for model-generated curves with lines
             if n_comp > 1 && strcmpi(lines_on,'yes')
