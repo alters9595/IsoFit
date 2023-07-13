@@ -74,7 +74,7 @@ end
 
 % Write parameters table to excel sheet
 sheetname = 'Parameters and CIs';
-xlswrite(fileloc,par_table,sheetname);
+xlswrite(fileloc,par_table,sheetname); % #ok
 
 % Perform autofit for parameters table
 for i=1:size(par_table,2)
@@ -89,7 +89,7 @@ end
 
 % Write statistics table to excel sheet
 sheetname = 'Fit Statistics';
-xlswrite(fileloc,stats_fit,sheetname);
+xlswrite(fileloc,stats_fit,sheetname); % #ok
 
 % Perform autofit for statistics table
 for i=1:size(stats_fit,2)
@@ -104,7 +104,7 @@ end
 
 % Write output data to excel sheet
 sheetname = 'Isotherm Data';
-xlswrite(fileloc,out_data,sheetname);
+xlswrite(fileloc,out_data,sheetname); % #ok
 
 % Perform autofit for output data table
 for i=1:size(out_data,2)
