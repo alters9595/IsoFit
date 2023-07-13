@@ -3,11 +3,11 @@ function [iso_data,iso_pars] = gen_struct()
 
 % Load adsorption isotherm data from excel sheet
 [data,~,~] = xlsread('Sheet for adsorption isotherm data entry',...
-    'Adsorption Isotherm Data Sheet');
+    'Adsorption Isotherm Data Sheet'); % #ok
 
 % Load fitting options from excel sheet
 [~,~,opts] = xlsread('Sheet for adsorption isotherm data entry',...
-    'Fitting Options');
+    'Fitting Options'); % #ok
 
 % Bin data into isotherm data structure
 iso_data.pH = data(:,1);             % pH
